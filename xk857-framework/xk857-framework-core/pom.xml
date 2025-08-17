@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.xk857</groupId>
+        <artifactId>xk857-framework</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <artifactId>xk857-framework-core</artifactId>
+    <packaging>jar</packaging>
+    <name>xk857-framework-core</name>
+    <description>框架核心实现模块，包含异常处理器等</description>
+
+    <dependencies>
+        <!-- 依赖API模块 -->
+        <dependency>
+            <groupId>com.xk857</groupId>
+            <artifactId>xk857-framework-api</artifactId>
+        </dependency>
+        
+        <!-- Spring Boot Web Starter -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        
+        <!-- Spring Boot Validation -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+        
+        <!-- 依赖处理器模块 -->
+        <dependency>
+            <groupId>com.xk857</groupId>
+            <artifactId>xk857-framework-processor</artifactId>
+        </dependency>
+    </dependencies>
+</project>

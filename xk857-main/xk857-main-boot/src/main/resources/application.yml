@@ -1,0 +1,37 @@
+server:
+  port: 18080
+
+spring:
+  application:
+    name: graceful-code-workshop
+
+springdoc:
+  api-docs:
+    enabled: true
+    path: /v3/api-docs
+    version: OPENAPI_3_0
+    groups:
+      enabled: true
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: alpha
+    disable-swagger-default-url: true
+    urls:
+      - name: default
+        url: /v3/api-docs
+  cache:
+    disabled: true
+  show-actuator: false
+  group-configs:
+    - group: 'default'
+      display-name: '默认分组'
+      paths-to-match: '/**'
+
+knife4j:
+  enable: true
+  setting:
+    language: zh_cn
+    enableReloadCacheParameter: true
+    enableRequestCache: false
