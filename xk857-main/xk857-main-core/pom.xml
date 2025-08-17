@@ -23,10 +23,10 @@
             <artifactId>xk857-main-api</artifactId>
         </dependency>
         
-        <!-- 依赖框架API模块 -->
+        <!-- 依赖框架core模块 -->
         <dependency>
             <groupId>com.xk857</groupId>
-            <artifactId>xk857-framework-api</artifactId>
+            <artifactId>xk857-framework-core</artifactId>
         </dependency>
         
         <!-- Spring Boot Starter -->

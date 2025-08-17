@@ -1,9 +1,9 @@
 package com.xk857.main.boot.controller;
 
-import com.xk857.framework.processor.annotation.MyApiResponse;
-import com.xk857.framework.processor.annotation.RawResponse;
 import com.xk857.framework.constants.ApplicationConstants;
 import com.xk857.framework.constants.CommonConstants;
+import com.xk857.framework.processor.annotation.APIVersion;
+import com.xk857.framework.processor.enmu.APIVersionEnum;
 import com.xk857.main.api.dto.UserDTO;
 import com.xk857.main.api.dto.UserQueryDTO;
 import com.xk857.main.api.service.UserService;
@@ -12,20 +12,20 @@ import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.Min;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import jakarta.validation.Valid;
-import jakarta.validation.constraints.Min;
-
-import java.util.List;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Slf4j
 @RestController
+@APIVersion(APIVersionEnum.V1)
 @RequestMapping("/api/users")
 @RequiredArgsConstructor
 @Validated

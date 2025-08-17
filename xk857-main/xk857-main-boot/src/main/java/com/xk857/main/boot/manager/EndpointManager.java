@@ -1,6 +1,8 @@
 package com.xk857.main.boot.manager;
 
 import com.xk857.framework.constants.ApplicationConstants;
+import com.xk857.framework.processor.annotation.APIVersion;
+import com.xk857.framework.processor.enmu.APIVersionEnum;
 import com.xk857.main.boot.dto.EndpointInfo;
 import com.xk857.main.boot.dto.WelcomeResponse;
 import io.swagger.v3.oas.annotations.Operation;
@@ -101,20 +103,31 @@ public class EndpointManager implements ApplicationListener<ContextRefreshedEven
             targetClass = controllerClass.getSuperclass();
         }
 
+        StringBuilder baseUrl = new StringBuilder();
+
+        // 检查是否有@APIVersion注解
+        if (targetClass.isAnnotationPresent(APIVersion.class)) {
+            APIVersion apiVersion = targetClass.getAnnotation(APIVersion.class);
+            APIVersionEnum versionEnum = apiVersion.value();
+            if (versionEnum != null && versionEnum.path().length > 0) {
+                baseUrl.append(versionEnum.path()[0]);
+            }
+        }
+
+        // 检查是否有@RequestMapping注解
         if (targetClass.isAnnotationPresent(RequestMapping.class)) {
             RequestMapping classMapping = targetClass.getAnnotation(RequestMapping.class);
 
             // 优先使用value属性
             if (classMapping.value().length > 0 && !classMapping.value()[0].isEmpty()) {
-                return classMapping.value()[0];
-            }
-
-            // 如果value为空，尝试使用path属性
-            if (classMapping.path().length > 0 && !classMapping.path()[0].isEmpty()) {
-                return classMapping.path()[0];
+                baseUrl.append(classMapping.value()[0]);
+            } else if (classMapping.path().length > 0 && !classMapping.path()[0].isEmpty()) {
+                // 如果value为空，尝试使用path属性
+                baseUrl.append(classMapping.path()[0]);
             }
         }
-        return "";
+
+        return baseUrl.toString();
     }
 
     /**
