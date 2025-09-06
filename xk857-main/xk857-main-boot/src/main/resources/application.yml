@@ -35,3 +35,14 @@ knife4j:
     language: zh_cn
     enableReloadCacheParameter: true
     enableRequestCache: false
+
+alert:
+  info:
+    channel: feishu
+    template: markdown
+  warn:
+    channel: email
+    template: text
+  critical:
+    channel: sms
+    template: text
