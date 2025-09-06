@@ -142,3 +142,7 @@ cd ../xk857-main/xk857-main-boot && mvn spring-boot:run
 
 - [@RestControllerAdvice的致命一击——我以为的“优雅设计”，却成了新功能的“头号杀手”](https://blog.csdn.net/qq_45740561/article/details/149866512)
 - [从“菜鸟崩溃”到“总监点赞”，我把糟糕的API改造成了团队标杆](https://blog.csdn.net/qq_45740561/article/details/149877543)
+
+### 分支管理
+- dp/bridge-basic：[停止滥用继承！这才是“组合”的正确打开方式：桥接模式深度剖析](https://blog.csdn.net/qq_45740561/article/details/118683594)
+- dp/composite-basic：[组合模式实战：从 parent_id 到前端JSON，一次搞定权限菜单系统](https://blog.csdn.net/qq_45740561/article/details/118697630)
