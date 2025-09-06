@@ -35,6 +35,18 @@
             <artifactId>spring-boot-starter-validation</artifactId>
         </dependency>
         
+        <!-- Spring AOP -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+        
+        <!-- Spring Cache -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-cache</artifactId>
+        </dependency>
+        
         <!-- 依赖处理器模块 -->
         <dependency>
             <groupId>com.xk857</groupId>
