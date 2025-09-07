@@ -152,3 +152,4 @@ cd ../xk857-main/xk857-main-boot && mvn spring-boot:run
 - dp/facede-basic：[一个好的“外观”，能让你的API像苹果产品一样简单好用](https://blog.csdn.net/qq_45740561/article/details/118704693)
 - dp/strategy-basic：[策略设计模式：让你的代码能跟上营销团队的“脑洞”](https://blog.csdn.net/qq_45740561/article/details/118710048)
 - dp/template-basic：[当你的代码需要一个“黄金流程”时，模板方法模式就是不二之选](https://blog.csdn.net/qq_45740561/article/details/118728558)
+- dp/iterator-basic：[别再只用 for-each 了！我用迭代器模式，写了个“带回滚功能”的轻量工作流引擎](https://blog.csdn.net/qq_45740561/article/details/151283204)
