@@ -35,3 +35,10 @@ knife4j:
     language: zh_cn
     enableReloadCacheParameter: true
     enableRequestCache: false
+
+# Redisson 配置（示例：本地 Redis 无密码，db=0）
+redisson:
+  address: redis://localhost:6379
+  database: 0
+  # password: ""
+  # timeout: 10000
