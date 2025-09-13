@@ -4,6 +4,13 @@ server:
 spring:
   application:
     name: graceful-code-workshop
+  data:
+    redis:
+      host: 127.0.0.1
+      port: 6379
+      password:
+      database: 0
+      timeout: 50000
 
 springdoc:
   api-docs:
